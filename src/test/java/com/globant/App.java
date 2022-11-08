@@ -1,76 +1,31 @@
-
-
 package com.globant;
-
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.Assert;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
-
+import org.testng.annotations.*;
 
 
 public class App {
     protected static Logger log= LoggerFactory.getLogger(App.class);
 
     @BeforeSuite
-    public void goesToESPN(){
-        log.info("goes to ESPN page");
+    public void validateESPNAccount(){
+        log.info("Must have a valid ESPN account");
     }
 
     @BeforeTest
-    public void isLoggedOut(){
-        log.info("validate if there is a user logged in and if so, log him out");
+    public void openAndCleanBrowser(){
+        System.out.println("-------------");
+        log.info("Open Browser");
+        log.info("clean cookies");
+        log.info("go to ESPN page https://www.espnqa.com/?_adbock=true&src=com&espn=cloud");
+        log.info("validate if it is the ESPN page");
+        log.info("Validate that the title of the page is equal to ESPN: Serving sports fans. Anytime. Anywhere.");
     }
 
-    @Test
-    public void Hello(){
-        String a = "Hello";
-        String b = " Joan";
-        String result = a + b;
-        Assert.assertEquals(result, "Hello Joan");
-    }
-
-    @AfterSuite
+    @AfterTest
     public void closeBrowser(){
-        log.info("Close browser");
-        log.info("End session- (selenium)");
+        log.info("Close Browser");
+        System.out.println("-------------");
     }
-
-    // abrir el browser
-    //ir a la pagina de ESPN https://www.espnqa.com/?_adbock=true&src=com
-    //Seleccionar el incono de perfil
-    //Del menu desplegable seleccionar la opcion Log in
-    //ingresar el user name o correo electronico
-    //ingresar el password
-
-
-    //Si no tiene cuenta....los mismos pasos de arriba
-    // Dar click en Sign UP
-    // llenar las datos
-    //fist name
-    //last name
-    //Email Address
-    //Password
-    // click en Sign UP
-
-
-    //Log out --- tienes que estar logueado
-    //ingresar al avatar
-    //click en log out
-
-
-    //Desactivar usuario ---tiene que estar logueado
-    //ingresar a la pagina
-    //DAr click en el avatar
-    //Dar clic en ESPN profile
-    //Dar click en delete Account
-    //click en Yes,delete this account
-    //Dar click en OK
-
-
-
 }
