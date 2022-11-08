@@ -1,6 +1,6 @@
 # Taller de testNG
 
-Un proyecto en Java utilizando maven.
+Crear un proyecto en Java utilizando maven.
 
 El pom.xml contenga la dependencia de TestNG (la versión deseada).
 .gitignore adaptado a sus necesidades.
@@ -11,8 +11,7 @@ Cree los tests para la página de ESPN (https://www.espnqa.com/?_adbock=true&src
 - Desactivar usuario.
 - Debe imprimir en la consola cada paso realizado para la ejecución de las pruebas.
 - Idealmente usar loggers.
-
-Una suite de pruebas (archivo xml) con la ejecución de las clases.
+- Una suite de pruebas (archivo xml) con la ejecución de las clases.
 Incorporar el print en consola simulando los pasos que abren y cierran el browser para cada test.
 
 ## - Nota:
@@ -20,7 +19,9 @@ Incorporar el print en consola simulando los pasos que abren y cierran el browse
 Este proyecto NO DEBE INCLUIR nada relacionado con selenium, cada test debe estar conformado por sentencias que impriman en consola lo que haría un test real.
 La precondición sería tener una cuenta válida de ESPN para los tres tests.
 Siga el ejemplo para la elaboración del ejercicio (tenga en cuenta imprimir en consola la iniciación y cierre del browser).
-Ejemplo de uso de anotaciones para realizar procesos bancarias en un cajero:
+
+
+## - Ejemplo de uso de anotaciones para realizar procesos bancarias en un cajero:
 
 @BeforeSuite
 //Poseer cuenta y tarjeta de la entidad bancaria
