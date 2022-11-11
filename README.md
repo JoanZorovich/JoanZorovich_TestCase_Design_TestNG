@@ -1,46 +1,26 @@
-# Taller de testNG
+# Taller de Locators ESPN
 
-Crear un proyecto en Java utilizando maven.
+Asegúrate de usar el siguiente enlace para que los selectores sean los mismos para todos:
+https://www.espnqa.com/?src=com&_adblock=true&espn=cloud
+(Cuando se cambia la localización de la página, los locators pueden cambiar)
 
-El pom.xml contenga la dependencia de TestNG (la versión deseada).
-.gitignore adaptado a sus necesidades.
+Pueden descargar CroPath como ayuda para validar selectores (recuerden que para buscar
+dentro de iFrames no funciona muy bien)
+https://chrome.google.com/webstore/detail/chropath/ljngjbnaijcbncmcnjfhigebomdlkcjo
 
-Cree los tests para la página de ESPN (https://www.espnqa.com/?_adbock=true&src=com&espn=cloud) de:
-- Iniciar sesión.
-- Cerrar sesión.
-- Desactivar usuario.
-- Debe imprimir en la consola cada paso realizado para la ejecución de las pruebas.
-- Idealmente usar loggers.
-- Una suite de pruebas (archivo xml) con la ejecución de las clases.
-Incorporar el print en consola simulando los pasos que abren y cierran el browser para cada test.
+Para este ejercicio deben crear una nueva rama con el formato
+ESPNLocators_<Nombres>_<Apellidos>
 
-## - Nota:
+El siguiente ejercicio se puede desarrollar en Word/Google Docs pero debe exportarse en
+formato .pdf y se debe guardar en la carpeta raíz del repositorio en su rama.
 
-Este proyecto NO DEBE INCLUIR nada relacionado con selenium, cada test debe estar conformado por sentencias que impriman en consola lo que haría un test real.
-La precondición sería tener una cuenta válida de ESPN para los tres tests.
-Siga el ejemplo para la elaboración del ejercicio (tenga en cuenta imprimir en consola la iniciación y cierre del browser).
+Basado en el ejercicio de modelaje de escenarios para:
+● Iniciar sesión
+● Cerrar sesión
+● Inhabilitar cuenta
 
-
-## - Ejemplo de uso de anotaciones para realizar procesos bancarias en un cajero:
-
-@BeforeSuite
-//Poseer cuenta y tarjeta de la entidad bancaria
-
-@BeforeClass
-//Entrar e interactuar con cajero de servicios bancario
-
-@BeforeMethod
-// Ingresar tarjeta en ranura de cajero
-
------ Test Case 1 ------
-
-@Test
-//Realizar transacción bancaria en el cajero
-
----- Fin Test Case 1 -----
-
-@AfterMethod
-//Revisar en pantalla o recibo de transacción realizada y retirar tarjeta de ranura del cajero
-
-@AfterClass
-//Retirarse del lugar donde está el cajero
+Obtener los selectores que creen pertinentes para manejar los procesos enunciados
+anteriormente, por favor, generar una lista cumpliendo las siguientes condiciones:
+<Nombre Vista>
+<Objeto> - <Selector>
+<Imagen con el objeto resaltado>
