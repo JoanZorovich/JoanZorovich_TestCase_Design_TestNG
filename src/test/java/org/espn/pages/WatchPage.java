@@ -2,9 +2,10 @@ package org.espn.pages;
 
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage extends BasePage{
+public class WatchPage extends BasePage{
 
-    public LoginPage(WebDriver driver) {
+
+    public WatchPage(WebDriver driver) {
         super(driver);
     }
 }

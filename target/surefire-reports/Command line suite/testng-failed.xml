@@ -10,6 +10,13 @@
           <include name="clickInProfileUSer"/>
         </methods>
       </class> <!-- org.espn.tests.LoginUserTest -->
+      <class name="org.espn.tests.HomePageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="clickInProfileUSer"/>
+          <include name="testSetUp"/>
+        </methods>
+      </class> <!-- org.espn.tests.HomePageTest -->
       <class name="org.espn.tests.BaseTest">
         <methods>
           <include name="tearDown"/>

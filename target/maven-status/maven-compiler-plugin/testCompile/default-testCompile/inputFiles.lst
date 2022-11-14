@@ -1,8 +1,9 @@
-C:\Users\joan.zorovich\JoanZorovich_TestCase_Design_TestNG\src\test\java\org\espn\pages\BasePage.java
-C:\Users\joan.zorovich\JoanZorovich_TestCase_Design_TestNG\src\test\java\org\espn\tests\LoginUserTest.java
-C:\Users\joan.zorovich\JoanZorovich_TestCase_Design_TestNG\src\test\java\org\espn\tests\BaseTest.java
-C:\Users\joan.zorovich\JoanZorovich_TestCase_Design_TestNG\src\test\java\org\espn\pages\LoginPage.java
-C:\Users\joan.zorovich\JoanZorovich_TestCase_Design_TestNG\src\test\java\org\espn\utils\Listener.java
-C:\Users\joan.zorovich\JoanZorovich_TestCase_Design_TestNG\src\test\java\org\espn\pages\HomePage.java
-C:\Users\joan.zorovich\JoanZorovich_TestCase_Design_TestNG\src\test\java\org\espn\tests\LogOutUserTest.java
-C:\Users\joan.zorovich\JoanZorovich_TestCase_Design_TestNG\src\test\java\org\espn\tests\DeactivateUserTest.java
+C:\Users\joan.zorovich\TAE-Academy\JoanZorovich_TestCase_Design_TestNG\src\test\java\org\espn\pages\BasePage.java
+C:\Users\joan.zorovich\TAE-Academy\JoanZorovich_TestCase_Design_TestNG\src\test\java\org\espn\pages\HomePage.java
+C:\Users\joan.zorovich\TAE-Academy\JoanZorovich_TestCase_Design_TestNG\src\test\java\org\espn\pages\WatchPage.java
+C:\Users\joan.zorovich\TAE-Academy\JoanZorovich_TestCase_Design_TestNG\src\test\java\org\espn\tests\DeactivateUserTest.java
+C:\Users\joan.zorovich\TAE-Academy\JoanZorovich_TestCase_Design_TestNG\src\test\java\org\espn\utils\Listener.java
+C:\Users\joan.zorovich\TAE-Academy\JoanZorovich_TestCase_Design_TestNG\src\test\java\org\espn\tests\BaseTest.java
+C:\Users\joan.zorovich\TAE-Academy\JoanZorovich_TestCase_Design_TestNG\src\test\java\org\espn\tests\HomePageTest.java
+C:\Users\joan.zorovich\TAE-Academy\JoanZorovich_TestCase_Design_TestNG\src\test\java\org\espn\tests\LoginUserTest.java
+C:\Users\joan.zorovich\TAE-Academy\JoanZorovich_TestCase_Design_TestNG\src\test\java\org\espn\tests\LogOutUserTest.java

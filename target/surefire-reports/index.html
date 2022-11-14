@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,  1 skipped,  </span>
+                    <span class="method-stats">2 methods,  2 skipped,  </span>
                   </li>
                   <li>
                     <span class="method-list-title skipped">Skipped methods</span>
@@ -101,6 +101,11 @@
                       <a href="#" panel-name="suite-Command_line_suite" class="show-methods skipped suite-Command_line_suite"> (show)</a> <!-- show-methods skipped suite-Command_line_suite -->
                     </span>
                     <div class="method-list-content skipped suite-Command_line_suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="org.espn.tests.HomePageTest" class="method navigator-link" hash-for-method="clickInProfileUSer">clickInProfileUSer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Command_line_suite" title="org.espn.tests.LoginUserTest" class="method navigator-link" hash-for-method="clickInProfileUSer">clickInProfileUSer</a> <!-- method navigator-link -->
@@ -138,6 +143,26 @@ Parameter &apos;browser&apos; is required by BeforeTest on method testSetUp but 
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Command_line_suite-class-skipped -->
+          <div class="suite-Command_line_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">org.espn.tests.HomePageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickInProfileUSer">
+                  </a> <!-- clickInProfileUSer -->
+                  <span class="method-name">clickInProfileUSer</span>
+                  <div class="stack-trace">org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by BeforeTest on method testSetUp but has not been marked @Optional or defined
+
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-skipped -->
         </div> <!-- panel Command_line_suite -->
         <div panel-name="test-xml-Command_line_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -151,6 +176,7 @@ Parameter &apos;browser&apos; is required by BeforeTest on method testSetUp but 
     &lt;classes&gt;
       &lt;class name=&quot;org.espn.tests.BaseTest&quot;/&gt;
       &lt;class name=&quot;org.espn.tests.DeactivateUserTest&quot;/&gt;
+      &lt;class name=&quot;org.espn.tests.HomePageTest&quot;/&gt;
       &lt;class name=&quot;org.espn.tests.LoginUserTest&quot;/&gt;
       &lt;class name=&quot;org.espn.tests.LogOutUserTest&quot;/&gt;
     &lt;/classes&gt;
@@ -166,7 +192,7 @@ Parameter &apos;browser&apos; is required by BeforeTest on method testSetUp but 
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Command line test (4 classes)</span>
+                <span class="test-name">Command line test (5 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -192,11 +218,15 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'clickInProfileUSer')
-data.setCell(0, 2, 'org.espn.tests.LoginUserTest')
+data.setCell(0, 2, 'org.espn.tests.HomePageTest')
 data.setCell(0, 3, 0);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'clickInProfileUSer')
+data.setCell(1, 2, 'org.espn.tests.LoginUserTest')
+data.setCell(1, 3, 0);
 window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
 return data;
 }
@@ -216,20 +246,11 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Command_line_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">6 ignored methods</span>
+            <span class="header-content">8 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">org.espn.tests.DeactivateUserTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-                <span class="ignored-method-name">testSetUp</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">org.espn.tests.LogOutUserTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">testSetUp</span>
                 <br/>
@@ -240,9 +261,27 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">org.espn.tests.LoginUserTest</span>
               <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+                <span class="ignored-method-name">testSetUp</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">org.espn.tests.HomePageTest</span>
+              <div class="ignored-methods-div">
                 <span class="ignored-method-name">testSetUp</span>
                 <br/>
                 <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">org.espn.tests.LogOutUserTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+                <span class="ignored-method-name">testSetUp</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -254,17 +293,24 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">org.espn.tests.LoginUserTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">org.espn.tests.HomePageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">clickInProfileUSer</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
+              <div class="chronological-class-name">org.espn.tests.LoginUserTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">clickInProfileUSer</span>
+                <span class="method-start">4 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">org.espn.tests.BaseTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">3 ms</span>
+                <span class="method-start">4 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
