@@ -3,11 +3,10 @@ package org.espn.tests;
 import org.espn.pages.HomePage;
 import org.testng.annotations.Test;
 
-public class LoginUserTest {
+public class LoginUserTest extends BaseTest{
 
-    //@Test
-    //public void clickInProfileUSer(){
-        //HomePage home = new HomePage(getDriver());
-        //home.isUserProfileLogoDisplayed();
-    //}
+    @Test
+    public void clickInProfileUSer(){
+        home.isUserProfileLogoDisplayed();
+    }
 }

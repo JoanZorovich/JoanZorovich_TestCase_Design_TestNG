@@ -1,4 +1,4 @@
 package org.espn.tests;
 
-public class LogOutUserTest {
+public class LogOutUserTest extends BaseTest{
 }
