@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="test suite espn">
+<suite name="Test Suite ESPN">
     <listeners>
         <listener class-name="org.espn.utils.Listener"/>
     </listeners>
@@ -11,8 +11,6 @@
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="org.espn.tests.LoginUserTest"/>
-            <class name="org.espn.tests.LogOutUserTest"/>
-            <class name="org.espn.tests.DeactivateUserTest"/>
         </classes>
     </test>
 </suite>
