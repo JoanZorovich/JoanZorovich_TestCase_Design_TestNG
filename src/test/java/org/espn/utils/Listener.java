@@ -4,10 +4,12 @@ import org.espn.reporting.Reporter;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import static org.espn.reporting.Reporter.info;
+
 public class Listener implements ITestListener {
     @Override
     public void onTestSuccess(ITestResult result){
-        Reporter.info("Test: " + result.getName() + " [PASSED]");
+        info("Test: " + result.getName() + " [PASSED]");
     }
 
     @Override
