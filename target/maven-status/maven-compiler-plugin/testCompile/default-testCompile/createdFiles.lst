@@ -1,8 +1,9 @@
+org\espn\pages\WatchPage.class
+org\espn\tests\HomePageTest.class
 org\espn\pages\HomePage.class
 org\espn\tests\LoginUserTest.class
 org\espn\tests\BaseTest.class
 org\espn\utils\Listener.class
-org\espn\pages\LoginPage.class
 org\espn\tests\LogOutUserTest.class
 org\espn\pages\BasePage.class
 org\espn\tests\DeactivateUserTest.class
