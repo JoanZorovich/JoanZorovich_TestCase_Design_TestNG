@@ -95,4 +95,11 @@ public class HomePage extends BasePage {
         super.placeMouseOverElement(userProfileLogo);
         return welcomeMessage.getText();
     }
+
+    public void doLogin(String email, String password){
+        placeMouseOverProfileLogo();
+        clickOnLoginLink();
+        switchLoginUserFormIframe();
+        typeLoginInfo(email, password);
+    }
 }
