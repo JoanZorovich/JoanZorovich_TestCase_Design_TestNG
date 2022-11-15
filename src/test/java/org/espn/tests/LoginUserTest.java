@@ -11,9 +11,9 @@ public class LoginUserTest extends BaseTest{
     private final String EMAIL = "joan.zorovich@globant.com";
     private final String PASSWORD = "Joan123#";
     private final String USER_NAME = "Joan!";
+    private final String WELCOME_MESSAGE = "Welcome!";
 
-
-    @Test()
+    @Test
     public void loginUser(){
         checkThat("Navbar is displayed", home.isNavbarDisplayed(), is(true) );
         checkThat("Profile Logo is displayed", home.isUserProfileLogoDisplayed(), is(true) );
@@ -26,5 +26,8 @@ public class LoginUserTest extends BaseTest{
         checkThat("Sign Up Button is displayed", home.isSignUpButtonDisplayed(), is(true) );
         home.typeLoginInfo(EMAIL, PASSWORD);
         checkThat("Login is success!!", home.getUserName(), is(USER_NAME) );
+        checkThat("Log Out Link is displayed", home.isLogOutLinkDisplayed(), is(true) );
+        home.logOutSession();
+        checkThat("The user has logged out successfully ", home.getWelcomeMessage(), is(WELCOME_MESSAGE) );
     }
 }

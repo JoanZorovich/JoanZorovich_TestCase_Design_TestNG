@@ -30,9 +30,10 @@ public class HomePage extends BasePage {
     private WebElement signUpButton;
     @FindBy(css = "li.display-user>span")
     private WebElement welcomeUser;
-
-
-
+    @FindBy(css = "div.global-user li:last-child a.small")
+    private WebElement logOutLink;
+    @FindBy(css = "li.display-user")
+    private WebElement welcomeMessage;
 
 
 
@@ -82,4 +83,16 @@ public class HomePage extends BasePage {
         return welcomeUser.getText();
     }
 
+    public boolean isLogOutLinkDisplayed(){
+        super.placeMouseOverElement(userProfileLogo);
+        return logOutLink.isDisplayed();
+    }
+    public void logOutSession(){;
+        super.placeMouseOverElement(userProfileLogo);
+        super.clickAnElement(logOutLink);
+    }
+    public String getWelcomeMessage(){
+        super.placeMouseOverElement(userProfileLogo);
+        return welcomeMessage.getText();
+    }
 }
