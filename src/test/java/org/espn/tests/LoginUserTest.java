@@ -8,19 +8,20 @@ import static org.hamcrest.Matchers.is;
 
 
 public class LoginUserTest extends BaseTest{
-    private final String EMAIL = "joan.zorovich@globant.com";
-    private final String PASSWORD = "Joan123#";
+    private final String EMAIL = "prueba@p.com";
+    private final String PASSWORD = "p12345678";
     private final String USER_NAME = "Joan!";
     private final String WELCOME_MESSAGE = "Welcome!";
 
     @Test
     public void loginUser(){
         checkThat("Navbar is displayed", home.isNavbarDisplayed(), is(true) );
+        checkThat("Promo Banner is displayed", home.isPromoBannerDisplayed(), is(true) );
         checkThat("Profile Logo is displayed", home.isUserProfileLogoDisplayed(), is(true) );
         home.placeMouseOverProfileLogo();
         checkThat("Profile Menu is displayed", home.isProfileMenuDisplayed(), is(true) );
         home.clickOnLoginLink();
-        home.switchLoginUserFormIframe();
+        home.switchToIframeForm();
         checkThat("ESPN logo is displayed", home.isESPNFormLogoDisplayed(), is(true) );
         checkThat("Submit Button is displayed", home.isSubmitButtonDisplayed(), is(true) );
         checkThat("Sign Up Button is displayed", home.isSignUpButtonDisplayed(), is(true) );

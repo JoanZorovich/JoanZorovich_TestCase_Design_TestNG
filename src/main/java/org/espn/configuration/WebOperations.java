@@ -59,5 +59,9 @@ public class WebOperations {
         getDriver().switchTo().frame(element);
     }
 
+    public void refreshBrowser(){
+        driver.navigate().refresh();
+    }
+
 }
 
