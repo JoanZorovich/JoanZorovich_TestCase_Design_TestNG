@@ -5,8 +5,8 @@ import org.testng.annotations.Test;
 import static org.hamcrest.Matchers.is;
 
 public class LogOutUserTest extends BaseTest{
-    private final String EMAIL = "prueba@p.com";
-    private final String PASSWORD = "p12345678";
+    private final String EMAIL = "p@prueba.com";
+    private final String PASSWORD = "prueba123456";
     private final String WELCOME_MESSAGE = "Welcome!";
     @Test
     public void logOutUser(){

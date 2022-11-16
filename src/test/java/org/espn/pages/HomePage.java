@@ -44,13 +44,10 @@ public class HomePage extends BasePage {
     private WebElement deleteAccountForm;
     @FindBy(css = "form.form-section.delete-profile-success")
     private WebElement deleteProfileSuccessForm;
-
     @FindBy (css = ".promo-banner-container iframe")
     private WebElement promoBanner;
-
     @FindBy (css = "div.PromoBanner__CloseBtn")
     private WebElement closeBanner;
-
     @FindBy (css = "li.pillar.watch")
     private WebElement watchLink;
 
@@ -119,7 +116,6 @@ public class HomePage extends BasePage {
         super.placeMouseOverElement(userProfileLogo);
         return welcomeMessage.getText();
     }
-
 
     public void doLogin(String email, String password){
         placeMouseOverProfileLogo();

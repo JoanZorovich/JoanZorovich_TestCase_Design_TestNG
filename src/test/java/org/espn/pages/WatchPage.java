@@ -59,19 +59,19 @@ public class WatchPage extends BasePage{
     }
 
     public boolean getCardsTitle(){
-        List<Boolean> titlesList = new ArrayList<>();
+        List<WebElement> titlesList = new ArrayList<>();
         firstCarouselCards.forEach(element -> {
-            titlesList.add(element.findElement(By.cssSelector("h2.WatchTile__Title")).isDisplayed());
+            titlesList.add(element.findElement(By.cssSelector("h2.WatchTile__Title")));
         });
-        return titlesList.contains(false);
+        return titlesList.size() == firstCarouselCards.size();
     }
 
     public boolean getCardsDescription(){
-        List<Boolean> descriptionsList = new ArrayList<>();
+        List<WebElement> descriptionsList = new ArrayList<>();
         firstCarouselCards.forEach(element -> {
-            descriptionsList.add(element.findElement(By.cssSelector("div.WatchTile__Meta")).isDisplayed());
+            descriptionsList.add(element.findElement(By.cssSelector("div.WatchTile__Meta")));
         });
-        return descriptionsList.contains(false);
+        return descriptionsList.size() == firstCarouselCards.size();
     }
 
 }
