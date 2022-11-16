@@ -34,6 +34,23 @@ public class HomePage extends BasePage {
     private WebElement logOutLink;
     @FindBy(css = "li.display-user")
     private WebElement welcomeMessage;
+    @FindBy(css = "li a[tref=\"/members/v3_1/modifyAccount\"]")
+    private WebElement ESPNProfile;
+    @FindBy(id = "Title")
+    private WebElement updateAccountTitle;
+    @FindBy(id = "AccountDeleteLink")
+    private WebElement deleteAccountLink;
+    @FindBy(css = "form.form-section")
+    private WebElement deleteAccountForm;
+    @FindBy(css = "form.form-section.delete-profile-success")
+    private WebElement deleteProfileSuccessForm;
+
+    @FindBy (css = ".promo-banner-container iframe")
+    private WebElement promoBanner;
+
+    @FindBy (css = "div.PromoBanner__CloseBtn")
+    private WebElement closeBanner;
+
 
 
 
@@ -60,7 +77,7 @@ public class HomePage extends BasePage {
     public void clickOnLoginLink(){
         super.clickAnElement(loginLink);
     }
-    public void switchLoginUserFormIframe(){
+    public void switchToIframeForm(){
         super.switchToIframe(iframeUserForm);
     }
 
@@ -92,7 +109,53 @@ public class HomePage extends BasePage {
         super.clickAnElement(logOutLink);
     }
     public String getWelcomeMessage(){
+        super.refreshBrowser();
         super.placeMouseOverElement(userProfileLogo);
         return welcomeMessage.getText();
     }
+
+    public void doLogin(String email, String password){
+        placeMouseOverProfileLogo();
+        clickOnLoginLink();
+        switchToIframeForm();
+        typeLoginInfo(email, password);
+    }
+
+    public boolean isESPNProfileLinkDisplayed(){
+        placeMouseOverProfileLogo();
+        return ESPNProfile.isDisplayed();
+    }
+    public void clickOnESPNProfileLink(){
+        placeMouseOverProfileLogo();
+        super.clickAnElement(ESPNProfile);
+    }
+    public String getTitleForm(){
+        return updateAccountTitle.getText();
+    }
+    public void clickOnDeleteAccount(){
+        clickAnElement(deleteAccountLink);
+    }
+
+    public boolean isDeleteAccountFormDisplayed(){
+        return deleteAccountForm.isDisplayed();
+    }
+
+    public void clickOnDeleteAccountButton(){
+        super.clickAnElement(submitButton);
+    }
+
+    public boolean isDeleteSuccessFormDisplayed(){
+        return deleteProfileSuccessForm.isDisplayed();
+    }
+
+    public boolean isPromoBannerDisplayed(){
+        boolean banner = false;
+        if(promoBanner.isDisplayed()){
+            super.switchToIframe(promoBanner);
+            super.clickAnElement(closeBanner);
+            banner = true;
+        }
+        return banner;
+    }
+
 }

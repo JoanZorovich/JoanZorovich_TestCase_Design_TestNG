@@ -19,4 +19,17 @@
             <class name="org.espn.tests.LoginUserTest"/>
         </classes>
     </test>
+    <test name="ESPN Log Out test">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="org.espn.tests.LogOutUserTest"/>
+        </classes>
+    </test>
+    <test name="ESPN Deactivate User test">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="org.espn.tests.DeactivateUserTest"/>
+        </classes>
+    </test>
 </suite>
+
