@@ -11,7 +11,7 @@ import java.time.Duration;
 import static org.openqa.selenium.support.PageFactory.initElements;
 
 public class WebOperations {
-    //Métodos para interactuar con los elementos de la página
+
     private final WebDriver driver;
     private final WebDriverWait wait;
     private final Actions action;
@@ -67,7 +67,6 @@ public class WebOperations {
     public void backToPage(){
         driver.navigate().back();
     }
-
 
 
 }

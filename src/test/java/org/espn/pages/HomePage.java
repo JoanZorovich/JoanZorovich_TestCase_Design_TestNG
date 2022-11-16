@@ -36,26 +36,27 @@ public class HomePage extends BasePage {
     private WebElement welcomeMessage;
     @FindBy(css = "li a[tref=\"/members/v3_1/modifyAccount\"]")
     private WebElement ESPNProfile;
-    @FindBy(id = "Title")
-    private WebElement updateAccountTitle;
     @FindBy(id = "AccountDeleteLink")
     private WebElement deleteAccountLink;
-    @FindBy(css = "form.form-section")
-    private WebElement deleteAccountForm;
-    @FindBy(css = "form.form-section.delete-profile-success")
-    private WebElement deleteProfileSuccessForm;
     @FindBy (css = ".promo-banner-container iframe")
     private WebElement promoBanner;
     @FindBy (css = "div.PromoBanner__CloseBtn")
     private WebElement closeBanner;
     @FindBy (css = "li.pillar.watch")
     private WebElement watchLink;
-
+    @FindBy(css = "p.text-block.text-left")
+    private WebElement textBox;
+    @FindBy(id = "TextSuccess")
+    private WebElement successDeleteText;
+    @FindBy(css = "form.form-section.account-deleted-gating")
+    private WebElement accountDeletedMessage;
 
 
     public HomePage(WebDriver driver) {
         super(driver);
     }
+
+
     public boolean isMainContentDisplayed(){
        return mainContent.isDisplayed();
     }
@@ -76,6 +77,7 @@ public class HomePage extends BasePage {
         super.clickAnElement(loginLink);
     }
     public void switchToIframeForm(){
+        super.waitForVisibility(iframeUserForm);
         super.switchToIframe(iframeUserForm);
     }
 
@@ -97,12 +99,10 @@ public class HomePage extends BasePage {
         super.placeMouseOverElement(userProfileLogo);
         return welcomeUser.getText();
     }
-
     public WatchPage goToWatchPage(){
         super.clickAnElement(watchLink);
         return new WatchPage(getDriver());
     }
-
     public boolean isLogOutLinkDisplayed(){
         super.placeMouseOverElement(userProfileLogo);
         return logOutLink.isDisplayed();
@@ -116,14 +116,12 @@ public class HomePage extends BasePage {
         super.placeMouseOverElement(userProfileLogo);
         return welcomeMessage.getText();
     }
-
     public void doLogin(String email, String password){
         placeMouseOverProfileLogo();
         clickOnLoginLink();
         switchToIframeForm();
         typeLoginInfo(email, password);
     }
-
     public boolean isESPNProfileLinkDisplayed(){
         placeMouseOverProfileLogo();
         return ESPNProfile.isDisplayed();
@@ -132,24 +130,18 @@ public class HomePage extends BasePage {
         placeMouseOverProfileLogo();
         super.clickAnElement(ESPNProfile);
     }
-    public String getTitleForm(){
-        return updateAccountTitle.getText();
-    }
-    public void clickOnDeleteAccount(){
+
+    public void clickOnDeleteAccountLink(){
+        waitForVisibility(deleteAccountLink);
         clickAnElement(deleteAccountLink);
     }
 
-    public boolean isDeleteAccountFormDisplayed(){
-        return deleteAccountForm.isDisplayed();
-    }
 
     public void clickOnDeleteAccountButton(){
+        super.waitForVisibility(submitButton);
         super.clickAnElement(submitButton);
     }
 
-    public boolean isDeleteSuccessFormDisplayed(){
-        return deleteProfileSuccessForm.isDisplayed();
-    }
 
     public boolean isPromoBannerDisplayed(){
         boolean banner = false;
@@ -160,5 +152,21 @@ public class HomePage extends BasePage {
         }
         return banner;
     }
+
+    public boolean isTextBoxDisplayed(){
+        super.waitForVisibility(textBox);
+        return textBox.isDisplayed();
+    }
+
+    public boolean isSuccessDeleteTextDisplayed(){
+        super.waitForVisibility(successDeleteText);
+        return successDeleteText.isDisplayed();
+    }
+
+    public boolean isAccountDeletedMessageDisplayed(){
+        super.waitForVisibility(accountDeletedMessage);
+        return accountDeletedMessage.isDisplayed();
+    }
+
 
 }
