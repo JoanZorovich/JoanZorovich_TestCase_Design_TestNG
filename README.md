@@ -31,6 +31,7 @@ a. Validate the element 'Nav text' has the right information previously entered 
 
 8. Click 'Log Out' element and validate:
 a. The user has logged out successfully i.e. Validate the element 'Nav text'has text: 'Welcome!' without user name specified
+
 B. Doing Logout
 
 1. Once logged in, create the flow to log out from current session.
