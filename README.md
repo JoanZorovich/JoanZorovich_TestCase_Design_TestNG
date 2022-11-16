@@ -1,46 +1,57 @@
-# Taller de testNG
+##Final Exam Web Module
 
-Crear un proyecto en Java utilizando maven.
+Based on the ESPN webpage (use the following link, do not open a region-based
+ESPN web page):
 
-El pom.xml contenga la dependencia de TestNG (la versión deseada).
-.gitignore adaptado a sus necesidades.
+How to send it: Create a branch from your github repository with the next structure
+ESPN_Final_Test/[FULL NAME]. Then send by email as the other workshops
+Web Browser URL: https://www.espnqa.com/?src=com&_adblock=true&espn=cloud
 
-Cree los tests para la página de ESPN (https://www.espnqa.com/?_adbock=true&src=com&espn=cloud) de:
-- Iniciar sesión.
-- Cerrar sesión.
-- Desactivar usuario.
-- Debe imprimir en la consola cada paso realizado para la ejecución de las pruebas.
-- Idealmente usar loggers.
-- Una suite de pruebas (archivo xml) con la ejecución de las clases.
-Incorporar el print en consola simulando los pasos que abren y cierran el browser para cada test.
+Create a single test for the following steps:
 
-## - Nota:
+A. Doing Login
 
-Este proyecto NO DEBE INCLUIR nada relacionado con selenium, cada test debe estar conformado por sentencias que impriman en consola lo que haría un test real.
-La precondición sería tener una cuenta válida de ESPN para los tres tests.
-Siga el ejemplo para la elaboración del ejercicio (tenga en cuenta imprimir en consola la iniciación y cierre del browser).
+1. Go to https://www.espnqa.com/?src=com&_adblock=true&espn=cloud
+2. Click ‘Log in’ element - Validate a modal is present and contains:
+a. ‘ESPN’ Logo
+b. ‘Log In’ button
+c. ‘Sign Up’ button
+
+3. Once logged in, go to 'Watch' and validate that at least one carousel is present:
+a. Each card in the carousel has a title and a small description about streaming source
+
+4. Click on the second card in the first carousel and validate
+a. 'X' button to close is present
+
+5. Click 'X' button to close
+6. Go back to the landing page
+7. Perform mouse hover the ‘User Icon’ element located at the top right corner of
+the view:
+a. Validate the element 'Nav text' has the right information previously entered in the sign up modal: 'Welcome {{username}}!'
+
+8. Click 'Log Out' element and validate:
+a. The user has logged out successfully i.e. Validate the element 'Nav text'has text: 'Welcome!' without user name specified
+B. Doing Logout
+
+1. Once logged in, create the flow to log out from current session.
+2. Validate session is log out from user panel
+
+C. Deactivate Account
 
 
-## - Ejemplo de uso de anotaciones para realizar procesos bancarias en un cajero:
+1. Once Logged in create the flow to deactivate account (is mandatory to explore the page to understand the flow)
+2. Validate the check green action when the account is deactivated
+3. Try to log in again with the same account to get message from page, validate it.
 
-@BeforeSuite
-//Poseer cuenta y tarjeta de la entidad bancaria
-
-@BeforeClass
-//Entrar e interactuar con cajero de servicios bancario
-
-@BeforeMethod
-// Ingresar tarjeta en ranura de cajero
-
------ Test Case 1 ------
-
-@Test
-//Realizar transacción bancaria en el cajero
-
----- Fin Test Case 1 -----
-
-@AfterMethod
-//Revisar en pantalla o recibo de transacción realizada y retirar tarjeta de ranura del cajero
-
-@AfterClass
-//Retirarse del lugar donde está el cajero
+Remember:
+● You should improve your code compared to the past exercise applied to
+ESPN web application. Include the best practices topics given.
+● Avoid using implicit waits, they end up creating idle times in the test executions.
+Be sure to use Page Object Pattern, Assertions (you decide how to validate each of
+the flows), and Parameters.
+● Use Assertions to assert test steps
+Example: When I finish the Log Out account, I will assert the “account was
+canceled” message appears.
+● Remember the difference between when to use Parameters and Data
+Providers. For example, you can use Parameters to set the URL of the
+webpage you’ll be testing.
