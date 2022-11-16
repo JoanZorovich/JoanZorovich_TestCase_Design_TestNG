@@ -1,5 +1,6 @@
 package org.espn.tests;
 
+import org.espn.pages.WatchPage;
 import org.testng.annotations.Test;
 
 import javax.swing.*;
@@ -27,6 +28,16 @@ public class LoginUserTest extends BaseTest{
         checkThat("Sign Up Button is displayed", home.isSignUpButtonDisplayed(), is(true) );
         home.typeLoginInfo(EMAIL, PASSWORD);
         checkThat("Login is success!!", home.getUserName(), is(USER_NAME) );
+        WatchPage watchPage = home.goToWatchPage();
+        checkThat("There is at least one carousel on the Page", watchPage.thereIsACarousel(), is(true) );
+        checkThat("Cards in the Carousel", watchPage.cardsNumber(), is(10) );
+        checkThat("Each card in the first carousel has a title", watchPage.getCardsTitle(), is(true) );
+        checkThat("Each card in the first carousel has a Description", watchPage.getCardsDescription(), is(true) );
+        watchPage.clickOnSecondCard();
+        checkThat("Light Box is displayed", watchPage.isAContentBoxDisplayed(), is(true) );
+        checkThat(" Close light Box button is displayed", watchPage.isAContentBoxDisplayed(), is(true) );
+        watchPage.clickOnCloseLightBoxButton();
+        watchPage.backToHomePage();
         checkThat("Log Out Link is displayed", home.isLogOutLinkDisplayed(), is(true) );
         home.logOutSession();
         checkThat("The user has logged out successfully ", home.getWelcomeMessage(), is(WELCOME_MESSAGE) );

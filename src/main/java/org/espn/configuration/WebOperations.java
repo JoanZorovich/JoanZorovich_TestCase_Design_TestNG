@@ -18,7 +18,7 @@ public class WebOperations {
 
     public WebOperations(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(5L));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(7L));
         this.action = new Actions(driver);
         initElements(driver, this);
     }
@@ -51,6 +51,7 @@ public class WebOperations {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+
     public void waitForClickable(WebElement element){
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
@@ -62,6 +63,12 @@ public class WebOperations {
     public void refreshBrowser(){
         driver.navigate().refresh();
     }
+
+    public void backToPage(){
+        driver.navigate().back();
+    }
+
+
 
 }
 

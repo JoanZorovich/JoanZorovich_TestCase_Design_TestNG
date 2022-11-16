@@ -7,29 +7,13 @@
 
     <parameter name="url" value="https://www.espnqa.com/?src=com&amp;_adblock=true&amp;espn=cloud"/>
 
-    <test name="ESPN HomePage Test">
-        <parameter name="browser" value="chrome"/>
-        <classes>
-            <class name="org.espn.tests.HomePageTest"/>
-        </classes>
-    </test>
+
     <test name="ESPN Login test">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="org.espn.tests.LoginUserTest"/>
         </classes>
     </test>
-    <test name="ESPN Log Out test">
-        <parameter name="browser" value="chrome"/>
-        <classes>
-            <class name="org.espn.tests.LogOutUserTest"/>
-        </classes>
-    </test>
-    <test name="ESPN Deactivate User test">
-        <parameter name="browser" value="chrome"/>
-        <classes>
-            <class name="org.espn.tests.DeactivateUserTest"/>
-        </classes>
-    </test>
+
 </suite>
 

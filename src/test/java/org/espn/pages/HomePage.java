@@ -51,7 +51,8 @@ public class HomePage extends BasePage {
     @FindBy (css = "div.PromoBanner__CloseBtn")
     private WebElement closeBanner;
 
-
+    @FindBy (css = "li.pillar.watch")
+    private WebElement watchLink;
 
 
 
@@ -100,6 +101,11 @@ public class HomePage extends BasePage {
         return welcomeUser.getText();
     }
 
+    public WatchPage goToWatchPage(){
+        super.clickAnElement(watchLink);
+        return new WatchPage(getDriver());
+    }
+
     public boolean isLogOutLinkDisplayed(){
         super.placeMouseOverElement(userProfileLogo);
         return logOutLink.isDisplayed();
@@ -113,6 +119,7 @@ public class HomePage extends BasePage {
         super.placeMouseOverElement(userProfileLogo);
         return welcomeMessage.getText();
     }
+
 
     public void doLogin(String email, String password){
         placeMouseOverProfileLogo();
